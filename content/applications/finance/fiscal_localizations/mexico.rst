@@ -581,19 +581,13 @@ other with the :guilabel:`CFDI Origin` field. To do so, it is necessary to have 
    `The official documentation for registration of down payments in Mexico
    <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Caso_uso_Anticipo.pdf>`_.
 
-First, navigate to the :menuselection:`Sales` app to create a product `Anticipo` and configure it.
-The :guilabel:`Product Type` must be :guilabel:`Service`, and use the :guilabel:`UNSPSC Category`
-must be: `84111506 Servicios de facturación`.
-
-Then, go to :menuselection:`Sales --> Settings --> Invoicing --> Down Payments`, and add the
-*Anticipo* product as the default.
-
 Create a sales order with the total amount, and create a down payment (either using a percentage or
 fixed amount). Then, sign the document, and :guilabel:`Register the Payment`.
 
 When the time comes for the customer to get the final invoice, create it again from the same sales
-order. In the :guilabel:`Create Invoices` wizard, select :guilabel:`Regular Invoice`, and uncheck
-:guilabel:`Deduct down payments`.
+order. In the :guilabel:`Create Invoices` wizard, select :guilabel:`Regular Invoice`.
+
+In the new draft invoice, the lines labeled as down payment must be removed.
 
 Then, copy the :guilabel:`Fiscal Folio` from the first invoice, and paste it into the
 :guilabel:`CDFI Origin` of the second invoice, adding the prefix `07|` before the value. Then, sign
@@ -603,9 +597,8 @@ After this, create a credit note for the first invoice. Copy the :guilabel:`Fisc
 second invoice, and paste it in the :guilabel:`CFDI Origin` of the credit note, adding the prefix
 `07|`. Then, sign the document.
 
-With this, all electronic documents are linked to each other. The final step is to fully pay the new
-invoice. At the bottom of the new invoice, you can find the credit note in the
-:guilabel:`Outstanding credits` - add it as payment. Finally, register the remaining amount with the
+With this, all electronic documents are linked to each other. At the bottom of the new invoice, you can find the credit note in the
+:guilabel:`Outstanding credits` - add it as payment. The final step is to fully pay the new invoice, register the remaining amount with the
 :guilabel:`Register Payment` wizard.
 
 External trade
